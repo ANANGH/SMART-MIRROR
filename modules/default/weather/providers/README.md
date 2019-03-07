@@ -1,6 +1,6 @@
-# MagicMirror² Weather Module Weather Provider Development Documentation
+# SmartMirror Weather Module Weather Provider Development Documentation
 
-This document describes the way to develop your own MagicMirror² weather module weather provider.
+This document describes the way to develop your own SmartMirror weather module weather provider.
 
 Table of Contents:
 
@@ -18,9 +18,9 @@ This is the script in which the weather provider will be defined. In it's most s
 ````javascript
 WeatherProvider.register("yourprovider", {
 	providerName: "YourProvider",
-	
+
 	fetchCurrentWeather() {},
-	
+
 	fetchWeatherForecast() {}
 });
 ````

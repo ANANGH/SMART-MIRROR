@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 
-# This is an installer script for MagicMirror2. It works well enough
-# that it can detect if you have Node installed, run a binary script
-# and then download and run MagicMirror2.
-
 echo -e "\e[0m"
 echo '$$\      $$\                     $$\           $$\      $$\ $$\                                          $$$$$$\'
 echo '$$$\    $$$ |                    \__|          $$$\    $$$ |\__|                                        $$  __$$\'
@@ -22,7 +18,7 @@ echo -e "\e[0m"
 NODE_TESTED="v5.1.0"
 
 # Determine which Pi is running.
-ARM=$(uname -m) 
+ARM=$(uname -m)
 
 # Check the Raspberry Pi version.
 if [ "$ARM" != "armv7l" ]; then
@@ -75,13 +71,13 @@ fi
 
 # Install or upgrade node if necessary.
 if $NODE_INSTALL; then
-	
+
 	echo -e "\e[96mInstalling Node.js ...\e[90m"
 
 	# Fetch the latest version of Node.js from the selected branch
 	# The NODE_STABLE_BRANCH variable will need to be manually adjusted when a new branch is released. (e.g. 7.x)
 	# Only tested (stable) versions are recommended as newer versions could break MagicMirror.
-	
+
 	NODE_STABLE_BRANCH="9.x"
 	curl -sL https://deb.nodesource.com/setup_$NODE_STABLE_BRANCH | sudo -E bash -
 	sudo apt-get install -y nodejs
@@ -101,7 +97,7 @@ if [ -d "$HOME/MagicMirror" ] ; then
 fi
 
 echo -e "\e[96mCloning MagicMirror ...\e[90m"
-if git clone --depth=1 https://github.com/MichMich/MagicMirror.git; then 
+if git clone --depth=1 https://github.com/MichMich/MagicMirror.git; then
 	echo -e "\e[92mCloning MagicMirror Done!\e[0m"
 else
 	echo -e "\e[91mUnable to clone MagicMirror."
@@ -110,7 +106,7 @@ fi
 
 cd ~/MagicMirror  || exit
 echo -e "\e[96mInstalling dependencies ...\e[90m"
-if npm install; then 
+if npm install; then
 	echo -e "\e[92mDependencies installation Done!\e[0m"
 else
 	echo -e "\e[91mUnable to install dependencies!"

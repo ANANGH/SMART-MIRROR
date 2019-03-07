@@ -1,6 +1,4 @@
-# MagicMirror² Module Development Documentation
-
-This document describes the way to develop your own MagicMirror² modules.
+This document describes the way to develop your own SmartMirror modules.
 
 Table of Contents:
 
@@ -17,30 +15,30 @@ Table of Contents:
   - Available module instance properties
   - Subclassable module methods
   - Module instance methods
-  
-- MagicMirror Helper Methods
+
+- SmartMirror Helper Methods
   - Module Selection
 
-- MagicMirror Logger
+- SmartMirror Logger
 
 ---
 
 
 ## General Advice
 
-As MagicMirror has gained huge popularity, so has the number of available modules. For new users and developers alike, it is very time consuming to navigate around the various repositories in order to find out what exactly a certain modules does, how it looks and what it depends on. Unfortunately, this information is rarely available, nor easily obtained without having to install it first. 
+As SmartMirror has gained huge popularity, so has the number of available modules. For new users and developers alike, it is very time consuming to navigate around the various repositories in order to find out what exactly a certain modules does, how it looks and what it depends on. Unfortunately, this information is rarely available, nor easily obtained without having to install it first.
 Therefore **we highly recommend you to include the following information in your README file.**
 
 - A high quality screenshot of your working module
 - A short, one sentence, clear description what it does (duh!)
 - What external API's it depend on, including web links to those
-- Wheteher the API/request require a key and the user limitations of those. (Is it free?)
+- Whether the API/request require a key and the user limitations of those.
 
-Surely this also help you get better recognition and feedback for your work. 
+Surely this also help you get better recognition and feedback for your work.
 
 ## Module structure
 
-All modules are loaded in the `modules` folder. The default modules are grouped together in the `modules/default` folder. Your module should be placed in a subfolder of `modules`. Note that any file or folder your create in the `modules` folder will be ignored by git, allowing you to upgrade the MagicMirror² without the loss of your files.
+All modules are loaded in the `modules` folder. The default modules are grouped together in the `modules/default` folder. Your module should be placed in a subfolder of `modules`. Note that any file or folder your create in the `modules` folder will be ignored by git, allowing you to upgrade the SmartMirror without the loss of your files.
 
 A module can be placed in one single folder. Or multiple modules can be grouped in a subfolder. Note that name of the module must be unique. Even when a module with a similar name is placed in a different folder, they can't be loaded at the same time.
 
@@ -104,7 +102,7 @@ Any properties defined in the defaults object, will be merged with the module co
 
 *Introduced in version: 2.1.0.*
 
-A string that defines the minimum version of the MagicMirror framework. If it is set, the system compares the required version with the users version. If the version of the user is out of date, it won't run the module. Make sure to also set this value in the Node helper.
+A string that defines the minimum version of the SmartMirror framework. If it is set, the system compares the required version with the users version. If the version of the user is out of date, it won't run the module. Make sure to also set this value in the Node helper.
 
 **Note:** Since this check is introduced in version 2.1.0, this check will not be run in older versions. Keep this in mind if you get issue reports on your module.
 
@@ -204,7 +202,7 @@ getTranslations: function() {
 #### `getDom()`
 **Should return:** Dom Object
 
-Whenever the MagicMirror needs to update the information on screen (because it starts, or because your module asked a refresh using `this.updateDom()`), the system calls the getDom method. This method should therefore return a dom object.
+Whenever the SmartMirror needs to update the information on screen (because it starts, or because your module asked a refresh using `this.updateDom()`), the system calls the getDom method. This method should therefore return a dom object.
 
 **Example:**
 ````javascript
@@ -219,7 +217,7 @@ getDom: function() {
 #### `getHeader()`
 **Should return:** String
 
-Whenever the MagicMirror needs to update the information on screen (because it starts, or because your module asked a refresh using `this.updateDom()`), the system calls the getHeader method to retrieve the module's header. This method should therefor return a string. If this method is not subclassed, this function will return the user's configured header.
+Whenever the SmartMirror needs to update the information on screen (because it starts, or because your module asked a refresh using `this.updateDom()`), the system calls the getHeader method to retrieve the module's header. This method should therefor return a string. If this method is not subclassed, this function will return the user's configured header.
 
 If you want to use the original user's configured header, reference `this.data.header`.
 
@@ -235,7 +233,7 @@ getHeader: function() {
 
 #### `notificationReceived(notification, payload, sender)`
 
-That MagicMirror core has the ability to send notifications to modules. Or even better: the modules have the possibility to send notifications to other modules. When this module is called, it has 3 arguments:
+That SmartMirror core has the ability to send notifications to modules. Or even better: the modules have the possibility to send notifications to other modules. When this module is called, it has 3 arguments:
 
 - `notification` - String - The notification identifier.
 - `payload` - AnyType - The payload of a notification.
@@ -297,7 +295,7 @@ If you want to create a path to a file in your module folder, use the `file()` m
 #### `this.updateDom(speed)`
 ***speed* Number** - Optional. Animation speed in milliseconds.<br>
 
-Whenever your module need to be updated, call the `updateDom(speed)` method. It requests the MagicMirror core to update its dom object. If you define the speed, the content update will be animated, but only if the content will really change.
+Whenever your module need to be updated, call the `updateDom(speed)` method. It requests the SmartMirror core to update its dom object. If you define the speed, the content update will be animated, but only if the content will really change.
 
 As an example: the clock modules calls this method every second:
 
@@ -436,7 +434,7 @@ If no translation is found, a fallback will be used. The fallback sequence is as
 - 4. Translation as defined in core translation file of the fallback language (the first defined core translation file).
 - 5. The key (identifier) of the translation.
 
-When adding translations to your module, it's a good idea to see if an apropriate translation is already available in the [core translation files](https://github.com/MichMich/MagicMirror/tree/master/translations). This way, your module can benefit from the existing translations.
+hen adding translations to your module, it's a good idea to see if an apropriate translation is already available in the [core translation files](https://github.com/ANANGH/SMART-MIRROR/tree/master/translations). This way, your module can benefit from the existing translations.
 
 **Example:**
 ````javascript
@@ -450,7 +448,7 @@ this.translate("INFO") //Will return a translated string for the identifier INFO
 }
 ````
 
-**Note:** although comments are officially not supported in JSON files, MagicMirror allows it by stripping the comments before parsing the JSON file. Comments in translation files could help other translators.
+**Note:** although comments are officially not supported in JSON files, SmartMirror allows it by stripping the comments before parsing the JSON file. Comments in translation files could help other translators.
 
 ##### `this.translate(identifier, variables)`
 ***identifier* String** - Identifier of the string that should be translated.
@@ -500,7 +498,7 @@ In this case the `translate`-function will not find any variables in the transla
 
 ## The Node Helper: node_helper.js
 
-The node helper is a Node.js script that is able to do some backend task to support your module. For every module type, only one node helper instance will be created. For example: if your MagicMirror uses two calendar modules, there will be only one calendar node helper instantiated.
+The node helper is a Node.js script that is able to do some backend task to support your module. For every module type, only one node helper instance will be created. For example: if your SmartMirror uses two calendar modules, there will be only one calendar node helper instantiated.
 
 **Note:** Because there is only one node helper per module type, there is no default config available within your module. It's your task to send the desired config from your module to your node helper.
 
@@ -553,7 +551,7 @@ This is a link to the IO instance. It will allow you to do some Socket.IO magic.
 #### `requiresVersion:`
 *Introduced in version: 2.1.0.*
 
-A string that defines the minimum version of the MagicMirror framework. If it is set, the system compares the required version with the users version. If the version of the user is out of date, it won't run the module.
+A string that defines the minimum version of the SmartMirror framework. If it is set, the system compares the required version with the users version. If the version of the user is out of date, it won't run the module.
 
 **Note:** Since this check is introduced in version 2.1.0, this check will not be run in older versions. Keep this in mind if you get issue reports on your module.
 
@@ -579,7 +577,7 @@ start: function() {
 ````
 
 #### `stop()`
-This method is called when the MagicMirror server receives a `SIGINT` command and is shutting down. This method should include any commands needed to close any open connections, stop any sub-processes and gracefully exit the module.
+This method is called when the SmartMirror server receives a `SIGINT` command and is shutting down. This method should include any commands needed to close any open connections, stop any sub-processes and gracefully exit the module.
 
 **Example:**
 ````javascript
@@ -621,7 +619,7 @@ If you want to send a notification to all your modules, use the `sendSocketNotif
 this.sendSocketNotification('SET_CONFIG', this.config);
 ````
 
-## MagicMirror Helper Methods
+## SmartMirror Helper Methods
 
 The core Magic Mirror object: `MM` has some handy method that will help you in controlling your and other modules. Most of the `MM` methods are available via convenience methods on the Module instance.
 
@@ -709,7 +707,7 @@ Module.register("modulename",{
 });
 ````
 
-## MagicMirror Logger
+## SmartMirror Logger
 
 The Magic Mirror contains a convenience wrapper for logging. Currently, this logger is a simple proxy to the original `console.log` methods. But it might get additional features in the future. The Loggers is currently only available in the core module file (not in the node_helper).
 

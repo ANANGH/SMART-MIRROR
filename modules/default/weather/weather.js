@@ -1,12 +1,8 @@
 /* global Module, WeatherProvider */
 
-/* Magic Mirror
- * Module: Weather
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- */
+/*Module: Weather
 
+*/
 Module.register("weather",{
 	// Default module config.
 	defaults: {

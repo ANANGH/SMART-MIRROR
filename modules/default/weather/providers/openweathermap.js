@@ -1,13 +1,7 @@
 /* global WeatherProvider, WeatherObject */
 
-/* Magic Mirror
- * Module: Weather
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- * 
- * This class is the blueprint for a weather provider.
- */
+/* Module: Weather
+*/
 
 WeatherProvider.register("openweathermap", {
 
@@ -66,7 +60,7 @@ WeatherProvider.register("openweathermap", {
 		return this.config.apiBase + this.config.apiVersion + this.config.weatherEndpoint + this.getParams();
 	},
 
-	/* 
+	/*
 	 * Generate a WeatherObject based on currentWeatherInformation
 	 */
 	generateWeatherObjectFromCurrentWeather(currentWeatherData) {

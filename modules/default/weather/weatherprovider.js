@@ -1,18 +1,10 @@
 /* global Class */
 
-/* Magic Mirror
- * Module: Weather
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- *
- * This class is the blueprint for a weather provider.
- */
+/*Module: Weather
+*/
 
 
-/**
- * Base BluePrint for the WeatherProvider
- */
+/* Base BluePrint for the WeatherProvider*/
 var WeatherProvider = Class.extend({
 	// Weather Provider Properties
 	providerName: null,

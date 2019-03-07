@@ -1,4 +1,4 @@
-# MagicMirror² Change Log
+# SmartMirror Change Log
 
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
@@ -23,7 +23,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Screenshot for the weather forecast module
 - Portuguese translation for "Feels"
 - Croatian translation
-- Fading for dateheaders timeFormat in Calendar [#1464](https://github.com/MichMich/MagicMirror/issues/1464)
+- Fading for dateheaders timeFormat in Calendar [#1464](https://github.com/ANANGH/SMART-MIRROR/issues/1464)
 - Documentation for the existing `scale` option in the Weather Forecast module.
 
 ### Fixed
@@ -31,7 +31,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Fixed Polish translation for Single Update Info
 - Ignore entries with unparseable details in the calendar module
 - Bug showing FullDayEvents one day too long in calendar fixed
-- Bug in newsfeed when `removeStartTags` is used on the description [#1478](https://github.com/MichMich/MagicMirror/issues/1478)
+- Bug in newsfeed when `removeStartTags` is used on the description [#1478](https://github.com/ANANGH/SMART-MIRROR/issues/1478)
 
 ### Updated
 - The default calendar setting `showEnd` is changed to `false`.
@@ -61,7 +61,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Mixup between german and spanish translation for newsfeed.
 - Fixed close dates to be absolute, if no configured in the config.js - module Calendar
 - Fixed the UpdateNotification module message about new commits in the repository, so they can be correctly localized in singular and plural form.
-- Fix for weatherforecast rainfall rounding [#1374](https://github.com/MichMich/MagicMirror/issues/1374)
+- Fix for weatherforecast rainfall rounding [#1374](https://github.com/ANANGH/SMART-MIRROR/issues/1374)
 - Fix calendar parsing issue for Midori on RasperryPi Zero w, related to issue #694.
 - Fix weather city ID link in sample config
 - Fixed issue with clientonly not updating with IP address and port provided on command line.
@@ -83,7 +83,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.4.0] - 2018-07-01
 
-⚠️ **Warning:** This release includes an updated version of Electron. This requires a Raspberry Pi configuration change to allow the best performance and prevent the CPU from overheating. Please read the information on the [MagicMirror Wiki](https://github.com/michmich/magicmirror/wiki/configuring-the-raspberry-pi#enable-the-open-gl-driver-to-decrease-electrons-cpu-usage).
+⚠️ **Warning:** This release includes an updated version of Electron. This requires a Raspberry Pi configuration change to allow the best performance and prevent the CPU from overheating. Please read the information on the [MagicMirror Wiki](https://github.com/ANANGH/SMART-MIRROR/wiki/configuring-the-raspberry-pi#enable-the-open-gl-driver-to-decrease-electrons-cpu-usage).
 
 ℹ️ **Note:** This update uses new dependencies. Please update using the following command: `git pull && npm install`
 
@@ -104,19 +104,19 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Upgrade to Electron 2.0.0.
 - Remove yarn-or-npm which breaks production builds.
-- Invoke module suspend even if no dom content. [#1308](https://github.com/MichMich/MagicMirror/issues/1308)
+- Invoke module suspend even if no dom content. [#1308](https://github.com/ANANGH/SMART-MIRROR/issues/1308)
 
 ### Fixed
-- Fixed issue where wind chill could not be displayed in Fahrenheit. [#1247](https://github.com/MichMich/MagicMirror/issues/1247)
-- Fixed issues where a module crashes when it tries to dismiss a non existing alert. [#1240](https://github.com/MichMich/MagicMirror/issues/1240)
+- Fixed issue where wind chill could not be displayed in Fahrenheit. [#1247](https://github.com/ANANGH/SMART-MIRRORissues/1247)
+- Fixed issues where a module crashes when it tries to dismiss a non existing alert. [#1240](https://github.com/ANANGH/SMART-MIRROR/issues/1240)
 - In default module currentWeather/currentWeather.js line 296, 300, self.config.animationSpeed can not be found because the notificationReceived function does not have "self" variable.
 - Fixed browser-side code to work on the Midori browser.
-- Fixed issue where heat index was reporting incorrect values in Celsius and Fahrenheit. [#1263](https://github.com/MichMich/MagicMirror/issues/1263)
+- Fixed issue where heat index was reporting incorrect values in Celsius and Fahrenheit. [#1263](https://github.com/ANANGH/SMART-MIRROR/issues/1263)
 - Fixed weatherforecast to use dt_txt field instead of dt to handle timezones better
-- Newsfeed now remembers to show the description when `"ARTICLE_LESS_DETAILS"` is called if the user wants to always show the description. [#1282](https://github.com/MichMich/MagicMirror/issues/1282)
+- Newsfeed now remembers to show the description when `"ARTICLE_LESS_DETAILS"` is called if the user wants to always show the description. [#1282](https://github.com/ANANGH/SMART-MIRROR/issues/1282)
 - `clientonly/*.js` is now linted, and one linting error is fixed
 - Fix issue #1196 by changing underscore to hyphen in locale id, in align with momentjs.
-- Fixed issue where heat index and wind chill were reporting incorrect values in Kelvin. [#1263](https://github.com/MichMich/MagicMirror/issues/1263)
+- Fixed issue where heat index and wind chill were reporting incorrect values in Kelvin. [#1263](https://github.com/ANANGH/SMART-MIRROR/issues/1263)
 
 ### Updated
 - Updated Italian translation
@@ -126,7 +126,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.3.1] - 2018-04-01
 
 ### Fixed
-- Downgrade electron to 1.4.15 to solve the black screen issue.[#1243](https://github.com/MichMich/MagicMirror/issues/1243)
+- Downgrade electron to 1.4.15 to solve the black screen issue.[#1243](https://github.com/ANANGH/SMART-MIRROR/issues/1243)
 
 ## [2.3.0] - 2018-04-01
 
@@ -182,7 +182,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - Add option to use [Nunjucks](https://mozilla.github.io/nunjucks/) templates in modules. (See `helloworld` module as an example.)
-- Add Bulgarian translations for MagicMirror² and Alert module.
+- Add Bulgarian translations for SmartMirror and Alert module.
 - Add graceful shutdown of modules by calling `stop` function of each `node_helper` on SIGINT before exiting.
 - Link update subtext to Github diff of current version versus tracking branch.
 - Add Catalan translation.
@@ -241,8 +241,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## [2.1.2] - 2017-07-01
 
 ### Changed
-- Revert Docker related changes in favor of [docker-MagicMirror](https://github.com/bastilimbach/docker-MagicMirror). All Docker images are outsourced. ([#856](https://github.com/MichMich/MagicMirror/pull/856))
-- Change Docker base image (Debian + Node) to an arm based distro (AlpineARM + Node) ([#846](https://github.com/MichMich/MagicMirror/pull/846))
+- Revert Docker related changes in favor of [docker-SmartMirror](https://github.com/bastilimbach/docker-MagicMirror). All Docker images are outsourced. ([#856](https://github.com/ANANGH/SMART-MIRROR/pull/856))
+- Change Docker base image (Debian + Node) to an arm based distro (AlpineARM + Node) ([#846](https://github.com/ANANGH/SMART-MIRRORpull/846))
 - Fix the dockerfile to have it running from the first time.
 
 ### Added
@@ -285,7 +285,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Add `anytime` group for Compliments module.
 - Compliments module can use remoteFile without default daytime arrays defined.
 - Installer: Use init config.js from config.js.sample.
-- Switched out `rrule` package for `rrule-alt` and fixes in `ical.js` in order to fix calendar issues. ([#565](https://github.com/MichMich/MagicMirror/issues/565))
+- Switched out `rrule` package for `rrule-alt` and fixes in `ical.js` in order to fix calendar issues. ([#565](https://github.com/ANANGH/SMART-MIRROR/issues/565))
 - Make mouse events pass through the region fullscreen_above to modules below.
 - Scaled the splash screen down to make it a bit more subtle.
 - Replace HTML tables with markdown tables in README files.
@@ -297,14 +297,14 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Restructured Test Suite.
 
 ### Added
-- Added Docker support (Pull Request [#673](https://github.com/MichMich/MagicMirror/pull/673)).
+- Added Docker support (Pull Request [#673](https://github.com/ANANGH/SMART-MIRROR/pull/673)).
 - Calendar-specific support for `maximumEntries`, and ` maximumNumberOfDays`.
 - Add loaded function to modules, providing an async callback.
 - Made default newsfeed module aware of gesture events from [MMM-Gestures](https://github.com/thobach/MMM-Gestures)
 - Add use pm2 for manager process into Installer RaspberryPi script.
 - Russian Translation.
 - Afrikaans Translation.
-- Add postinstall script to notify user that MagicMirror installed successfully despite warnings from NPM.
+- Add postinstall script to notify user that SmartMirror installed successfully despite warnings from NPM.
 - Init tests using mocha.
 - Option to use RegExp in Calendar's titleReplace.
 - Hungarian Translation.
@@ -342,7 +342,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Update .gitignore to not ignore default modules folder.
 - Remove white flash on boot up.
 - Added `update` in Raspberry Pi installation script.
-- Fix an issue where the analog clock looked scrambled. ([#611](https://github.com/MichMich/MagicMirror/issues/611))
+- Fix an issue where the analog clock looked scrambled. ([#611](https://github.com/ANANGH/SMART-MIRROR/issues/611))
 - If units is set to imperial, the showRainAmount option of weatherforecast will show the correct unit.
 - Module currentWeather: check if temperature received from api is defined.
 - Fix an issue with module hidden status changing to `true` although lock string prevented showing it.
@@ -358,18 +358,18 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Finnish translation.
 - Danish translation.
 - Turkish translation.
-- Option to limit access to certain IP addresses based on the value of `ipWhitelist` in the `config.js`, default is access from localhost only (Issue [#456](https://github.com/MichMich/MagicMirror/issues/456)).
+- Option to limit access to certain IP addresses based on the value of `ipWhitelist` in the `config.js`, default is access from localhost only (Issue [#456](https://github.com/ANANGH/SMART-MIRROR/issues/456)).
 - Added ability to change the point of time when calendar events get relative.
 - Add Splash screen on boot.
 - Add option to show humidity in currentWeather module.
 - Add VSCode IntelliSense support.
-- Module API: Add Visibility locking to module system. [See documentation](https://github.com/MichMich/MagicMirror/tree/develop/modules#visibility-locking) for more information.
-- Module API: Method to overwrite the module's header. [See documentation](https://github.com/MichMich/MagicMirror/tree/develop/modules#getheader) for more information.
-- Module API: Option to define the minimum MagicMirror version to run a module. [See documentation](https://github.com/MichMich/MagicMirror/tree/develop/modules#requiresversion) for more information.
-- Calendar module now broadcasts the event list to all other modules using the notification system. [See documentation](https://github.com/MichMich/MagicMirror/tree/develop/modules/default/calendar) for more information.
-- Possibility to use the the calendar feed as the source for the weather (currentweather & weatherforecast) location data. [See documentation](https://github.com/MichMich/MagicMirror/tree/develop/modules/default/weatherforecast) for more information.
+- Module API: Add Visibility locking to module system. [See documentation](https://github.com/ANANGH/SMART-MIRROR/tree/develop/modules#visibility-locking) for more information.
+- Module API: Method to overwrite the module's header. [See documentation](https://github.com/ANANGH/SMART-MIRROR/tree/develop/modules#getheader) for more information.
+- Module API: Option to define the minimum SmartMirror version to run a module. [See documentation](https://github.com/ANANGH/SMART-MIRROR/tree/develop/modules#requiresversion) for more information.
+- Calendar module now broadcasts the event list to all other modules using the notification system. [See documentation](https://github.com/ANANGH/SMART-MIRROR/tree/develop/modules/default/calendar) for more information.
+- Possibility to use the the calendar feed as the source for the weather (currentweather & weatherforecast) location data. [See documentation](https://github.com/ANANGH/SMART-MIRROR/tree/develop/modules/default/weatherforecast) for more information.
 - Added option to show rain amount in the weatherforecast default module
-- Add module `updatenotification` to get an update whenever a new version is availabe. [See documentation](https://github.com/MichMich/MagicMirror/tree/develop/modules/default/updatenotification) for more information.
+- Add module `updatenotification` to get an update whenever a new version is availabe. [See documentation](https://github.com/ANANGH/SMART-MIRROR/tree/develop/modules/default/updatenotification) for more information.
 - Add the abilty to set timezone on the date display in the Clock Module
 - Ability to set date format in calendar module
 - Possibility to use currentweather for the compliments
@@ -432,11 +432,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Prevent `getModules()` selectors from returning duplicate entries.
-- Append endpoints of weather modules with `/` to retreive the correct data. (Issue [#337](https://github.com/MichMich/MagicMirror/issues/337))
+- Append endpoints of weather modules with `/` to retreive the correct data. (Issue [#337](https://github.com/ANANGH/SMART-MIRROR/issues/337))
 - Corrected grammer in `module.js` from 'suspend' to 'suspended'.
 - Fixed openweathermap.org URL in config sample.
 - Prevent currentweather module from crashing when received data object is incorrect.
-- Fix issue where translation loading prevented the UI start-up when the language was set to 'en'. (Issue [#388](https://github.com/MichMich/MagicMirror/issues/388))
+- Fix issue where translation loading prevented the UI start-up when the language was set to 'en'. (Issue [#388](https://github.com/ANANGH/SMART-MIRROR/issues/388))
 
 ### Updated
 - Updated package.json to fix possible vulnerabilities. (Using Snyk)
@@ -452,8 +452,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Add an analog clock in addition to the digital one.
 
 ### Fixed
-- Edit Alert Module to display title & message if they are provided in the notification (Issue [#300](https://github.com/MichMich/MagicMirror/issues/300))
-- Removed 'null' reference from updateModuleContent(). This fixes recent Edge and Internet Explorer browser displays (Issue [#319](https://github.com/MichMich/MagicMirror/issues/319))
+- Edit Alert Module to display title & message if they are provided in the notification (Issue [#300](https://github.com/ANANGH/SMART-MIRROR/issues/300))
+- Removed 'null' reference from updateModuleContent(). This fixes recent Edge and Internet Explorer browser displays (Issue [#319](https://github.com/ANANGH/SMART-MIRROR/issues/319))
 
 ### Changed
 - Added default string to calendar titleReplace.
@@ -466,7 +466,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 - Added reference to Italian Translation.
-- Added the missing NE translation to all languages. [#344](https://github.com/MichMich/MagicMirror/issues/344)
+- Added the missing NE translation to all languages. [#344](https://github.com/ANANGH/SMART-MIRROR/issues/344)
 - Added proper User-Agent string to calendar call.
 
 ### Changed
@@ -481,7 +481,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - Improve the installer by fetching the latest Node.js without any 3rd party interferences.
 
 ## [2.0.0] - 2016-05-03
-### Initial release of MagicMirror²
+### Initial release of SmartMirror
 It includes (but is not limited to) the following features:
 - Modular system allowing 3rd party plugins.
 - An Node/Electron based application taking away the need for external servers or browsers.
@@ -489,5 +489,4 @@ It includes (but is not limited to) the following features:
 - Small cute fairies that kiss you while you sleep.
 
 ## [1.0.0] - 2014-02-16
-### Initial release of MagicMirror.
-This was part of the blogpost: [http://michaelteeuw.nl/post/83916869600/magic-mirror-part-vi-production-of-the](http://michaelteeuw.nl/post/83916869600/magic-mirror-part-vi-production-of-the)
+### Initial release of SmartMirror.

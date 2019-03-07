@@ -1,14 +1,8 @@
 /* global WeatherProvider, WeatherDay */
 
-/* Magic Mirror
- * Module: Weather
+/* Module: Weather
  * Provider: Dark Sky
- *
- * By Nicholas Hubbard https://github.com/nhubbard
- * MIT Licensed
- *
- * This class is a provider for Dark Sky.
- */
+*/
 WeatherProvider.register("darksky", {
 	// Set the name of the provider.
 	// Not strictly required, but helps for debugging.

@@ -1,9 +1,3 @@
-/* Simple JavaScript Inheritance
- * By John Resig http://ejohn.org/
- * MIT Licensed.
- */
-
-// Inspired by base2 and Prototype
 (function () {
 	var initializing = false;
 	var fnTest = /xyz/.test(function () { xyz; }) ? /\b_super\b/ : /.*/;

@@ -1,11 +1,7 @@
 /* global Module */
 
-/* Magic Mirror
- * Module: NewsFeed
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- */
+/*Module: NewsFeed
+*/
 
 Module.register("newsfeed",{
 
@@ -13,8 +9,8 @@ Module.register("newsfeed",{
 	defaults: {
 		feeds: [
 			{
-				title: "New York Times",
-				url: "http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+				title: "News",
+				url: "https://zeenews.india.com/malayalam/india.xml",
 				encoding: "UTF-8" //ISO-8859-1
 			}
 		],

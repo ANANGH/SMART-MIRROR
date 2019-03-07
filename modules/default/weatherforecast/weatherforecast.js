@@ -1,11 +1,7 @@
 /* global Module */
 
-/* Magic Mirror
- * Module: WeatherForecast
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- */
+/*Module: WeatherForecast
+*/
 
 Module.register("weatherforecast",{
 
@@ -13,7 +9,7 @@ Module.register("weatherforecast",{
 	defaults: {
 		location: false,
 		locationID: false,
-		appid: "",
+		appid: "1347012b86be2b148a76e8e9118ef1e9",
 		units: config.units,
 		maxNumberOfDays: 7,
 		showRainAmount: false,
