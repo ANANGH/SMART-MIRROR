@@ -1,9 +1,5 @@
-/* Magic Mirror
- * Node Helper: Calendar - CalendarFetcher
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- */
+/*Node Helper: Calendar - CalendarFetcher
+*/
 
 var ical = require("./vendor/ical.js");
 var moment = require("moment");
@@ -28,7 +24,7 @@ var CalendarFetcher = function(url, reloadInterval, excludedEvents, maximumEntri
 		nodeVersion = Number(process.version.match(/^v(\d+\.\d+)/)[1]);
 		var opts = {
 			headers: {
-				"User-Agent": "Mozilla/5.0 (Node.js "+ nodeVersion + ") MagicMirror/"  + global.version +  " (https://github.com/MichMich/MagicMirror/)"
+				"User-Agent": "Mozilla/5.0 (Node.js "+ nodeVersion + ") SMART-MIRROR/"  + global.version +  " (https://github.com/ANANGH/SMART-MIRROR/)"
 			},
 			gzip: true
 		};

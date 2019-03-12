@@ -1,9 +1,5 @@
-/* Magic Mirror
- * Node Helper: Calendar
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- */
+/*Node Helper: Calendar
+*/
 
 var NodeHelper = require("node_helper");
 var validUrl = require("valid-url");

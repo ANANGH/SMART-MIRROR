@@ -1,11 +1,7 @@
 /* global Module */
 
-/* Magic Mirror
- * Module: CurrentWeather
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- */
+/*Module: CurrentWeather
+*/
 
 Module.register("currentweather",{
 
@@ -455,7 +451,7 @@ Module.register("currentweather",{
 
 		// The moment().format('h') method has a bug on the Raspberry Pi.
 		// So we need to generate the timestring manually.
-		// See issue: https://github.com/MichMich/MagicMirror/issues/181
+
 		var sunriseSunsetDateObject = (sunrise < now && sunset > now) ? sunset : sunrise;
 		var timeString = moment(sunriseSunsetDateObject).format("HH:mm");
 		if (this.config.timeFormat !== 24) {

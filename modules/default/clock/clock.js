@@ -1,10 +1,5 @@
-/* global Log, Module, moment, config */
-/* Magic Mirror
- * Module: Clock
- *
- * By Michael Teeuw http://michaelteeuw.nl
- * MIT Licensed.
- */
+/*Module: Clock
+*/
 Module.register("clock",{
 	// Module config defaults.
 	defaults: {
@@ -72,7 +67,7 @@ Module.register("clock",{
 		// Set content of wrappers.
 		// The moment().format("h") method has a bug on the Raspberry Pi.
 		// So we need to generate the timestring manually.
-		// See issue: https://github.com/MichMich/MagicMirror/issues/181
+
 		var timeString;
 		var now = moment();
 		if (this.config.timezone) {
@@ -136,7 +131,7 @@ Module.register("clock",{
 				clockCircle.style.background = "url("+ this.data.path + "faces/" + this.config.analogFace + ".svg)";
 				clockCircle.style.backgroundSize = "100%";
 
-				// The following line solves issue: https://github.com/MichMich/MagicMirror/issues/611
+
 				clockCircle.style.border = "1px solid black";
 
 			} else if (this.config.analogFace != "none") {

@@ -1,5 +1,5 @@
 # Module: Alert
-The alert module is one of the default modules of the MagicMirror. This module displays notifications from other modules.
+The alert module is one of the default modules of the SmartMirror. This module displays notifications from other modules.
 
 ## Usage
 To use this module, add it to the modules array in the config/config.js file:
@@ -15,20 +15,6 @@ modules: [
 	}
 ]
 ```
-
-## Configuration options
-
-The following properties can be configured:
-
-
-| Option            | Description
-| ----------------- | -----------
-| `effect`          | The animation effect to use for notifications. <br><br> **Possible values:** `scale` `slide` `genie` `jelly` `flip` `exploader` `bouncyflip` <br> **Default value:** `slide`
-| `alert_effect`    | The animation effect to use for alerts. <br><br> **Possible values:** `scale` `slide` `genie` `jelly` `flip` `exploader` `bouncyflip` <br> **Default value:** `jelly`
-| `display_time`    | Time a notification is displayed in milliseconds. <br><br> **Possible values:** `int` <br> **Default value:** `3500`
-| `position`        | Position where the notifications should be displayed. <br><br> **Possible values:** `left` `center` `right` <br> **Default value:** `center`
-| `welcome_message` | Message shown at startup. <br><br> **Possible values:** `string` `false` <br> **Default value:** `false` (no message at startup)
-
 
 ## Developer notes
 For notifications use:
