@@ -27,7 +27,7 @@ SmartMirror focuses on a modular plugin system and uses [Electron](http://electr
 
 #### Automatic Installation (Raspberry Pi only!)
 
-*Electron*, the app wrapper around MagicMirror², only supports the Raspberry Pi 2/3. The Raspberry Pi 0/1 is currently **not** supported. If you want to run this on a Raspberry Pi 1, use the [server only](#server-only) feature and setup a fullscreen browser yourself. (Yes, people have managed to run SM also on a Pi0, so if you insist, search in the forums.)
+*Electron*, the app wrapper around SmartMirror, only supports the Raspberry Pi 2/3. The Raspberry Pi 0/1 is currently **not** supported. If you want to run this on a Raspberry Pi 1, use the [server only](#server-only) feature and setup a fullscreen browser yourself. (Yes, people have managed to run SM also on a Pi0, so if you insist, search in the forums.)
 
 Note that you will need to install the latest full version of Raspbian, **don't use the Lite version**.
 
@@ -123,9 +123,9 @@ The following properties can be configured:
 
 | **Option** | **Description** |
 | --- | --- |
-| `port` | The port on which the MagicMirror² server will run on. The default value is `8080`. |
+| `port` | The port on which the SmartMirror server will run on. The default value is `8080`. |
 | `address` | The *interface* ip address on which to accept connections. The default is `localhost`, which would prevent exposing the built-in webserver to machines on the local network. To expose it to other machines, use: `0.0.0.0`. |
-| `ipWhitelist` | The list of IPs from which you are allowed to access the MagicMirror². The default value is `["127.0.0.1", "::ffff:127.0.0.1", "::1"]`, which is from `localhost` only. Add your IP when needed. You can also specify IP ranges with subnet masks (`["127.0.0.1", "127.0.0.1/24"]`) or directly with (`["127.0.0.1", ["192.168.0.1", "192.168.0.100"]]`). Set `[]` to allow all IP addresses. For more information see: [follow post ipWhitelist HowTo](https://forum.magicmirror.builders/topic/1326/ipwhitelist-howto) |
+| `ipWhitelist` | The list of IPs from which you are allowed to access the SmartMirror. The default value is `["127.0.0.1", "::ffff:127.0.0.1", "::1"]`, which is from `localhost` only. Add your IP when needed. You can also specify IP ranges with subnet masks (`["127.0.0.1", "127.0.0.1/24"]`) or directly with (`["127.0.0.1", ["192.168.0.1", "192.168.0.100"]]`). Set `[]` to allow all IP addresses. For more information see: [follow post ipWhitelist HowTo](https://forum.magicmirror.builders/topic/1326/ipwhitelist-howto) |
 | `zoom` | This allows to scale the mirror contents with a given zoom factor. The default value is `1.0`|
 | `language` | The language of the interface. (Note: Not all elements will be localized.) Possible values are `en`, `nl`, `ru`, `fr`, etc., but the default value is `en`. |
 | `timeFormat` | The form of time notation that will be used. Possible values are `12` or `24`. The default is `24`. |
@@ -158,12 +158,12 @@ The following modules are installed by default.
 - [**Hello World**](modules/default/helloworld)
 - [**Alert**](modules/default/alert)
 
-For more available modules, check out out the wiki page [SmartMirror 3rd Party Modules](https://github.com/MichMich/MagicMirror/wiki/3rd-party-modules). If you want to build your own modules, check out the [SmartMirror Module Development Documentation](modules) and don't forget to add it to the wiki and the [forum](https://forum.magicmirror.builders/category/7/showcase)!
+For more available modules, check out out the wiki page [SmartMirror 3rd Party Modules](https://github.com/ANANGH/SMART-MIRROR/wiki/3rd-party-modules). If you want to build your own modules, check out the [SmartMirror Module Development Documentation](modules) and don't forget to add it to the wiki and the [forum](https://forum.magicmirror.builders/category/7/showcase)!
 
 
 ## Updating
 
-If you want to update your MagicMirror² to the latest version, use your terminal to go to your Magic Mirror folder and type the following command:
+If you want to update your SmartMirror to the latest version, use your terminal to go to your Magic Mirror folder and type the following command:
 
 ```bash
 git pull && npm install
@@ -183,7 +183,7 @@ Please keep the following in mind:
 - **Major Bug Fixes**: please discuss your approach in an GitHub issue before you start to alter a big part of the code.
 - **New Features**: please please discuss in a GitHub issue before you start to alter a big part of the code. Without discussion upfront, the pull request will not be accepted / merged.
 
-Thanks for your help in making MagicMirror² better!
+Thanks for your help in making SmartMirror better!
 
 ## Manifesto
 
